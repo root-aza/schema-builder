@@ -43,12 +43,11 @@ final class Compiler
      * Compile the registry schema.
      *
      * @param Registry $registry
-     * @param GeneratorInterface[] $generators
+     * @param iterable<GeneratorInterface> $generators
      * @param array $defaults
      * @return array
-     *
      */
-    public function compile(Registry $registry, array $generators = [], array $defaults = []): array
+    public function compile(Registry $registry, iterable $generators = [], array $defaults = []): array
     {
         $this->defaults = $defaults + $this->defaults;
 
